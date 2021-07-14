@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev-start": "nodemon server.js",
+    "dev-start": "npm build:css && nodemon server.js",
+    "build:css": "postcss public/tailwind.css -o public/styles.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jumbo Daniel",
@@ -13,7 +14,8 @@
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "mongoose": "^5.13.1",
-    "shortid": "^2.2.16"
+    "shortid": "^2.2.16",
+    "tailwindcss": "^2.2.4"
   },
   "devDependencies": {
     "nodemon": "^2.0.9"
