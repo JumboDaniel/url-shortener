@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev-start": "npm build:css && nodemon server.js",
+    "dev-start": "nodemon server.js",
     "build:css": "postcss public/tailwind.css -o public/styles.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
