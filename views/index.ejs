@@ -1,14 +1,14 @@
 <%- include('partials/header'); -%>
 <body>
-    <div class="container">
+    <div class="container ">
         <h1>Link Shortner</h1>
         <form action="/shorturls" method="POST">
             <input type="url" name="fullUrl" placeholder="URL" required id="fullUrl">
             <button type="submit">shrink</button>
         </form>
-        <table>
+        <table class="border-separate border border-green-800 w-full text-md bg-white shadow-md rounded mb-4 ">
             <thead>
-                <tr>
+                <tr class="border-b text-left">
                     <th>Full URL</th>
                     <th>Short URL</th>
                     <th>Clicks</th>
@@ -16,7 +16,7 @@
             </thead>
             <tbody>
                 <% shorturl.forEach(shorturl => { %>
-                    <tr>
+                    <tr class="text-left">
                         <td><a href="<%= shorturl.full%>"><%= shorturl.full%></a></td>
                         <td><a href="<%= shorturl.short%>"><%= shorturl.short%></a></td>
                         <td><%= shorturl.clicks%></td>
